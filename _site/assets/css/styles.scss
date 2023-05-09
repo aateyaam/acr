@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+::selection
+{
+        color: black;
+        background-color: azure;
+}
+
+.title::selection
+{
+        color: red;
+}
+
+
+*
+{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        text-align: center;
+
+}
+
+body
+{
+        padding-inline: 1rem;
+}
+
+@mixin hoverToRed
+{
+        text-decoration: none;
+        color: azure;
+        font-size: 1.3rem;
+        transition: 0.15s;
+
+        &:hover, &:active
+        {
+                color: red;
+                text-decoration: none;
+        }
+}
+a
+{
+        @include hoverToRed;
+}
+
+.title
+{
+        color: red;
+}
+
+
+body
+{
+        font-family: 'Special Elite', cursive;
+        background-color: #0e0e0e;
+        color: azure;
+}
+
+section
+{
+
+
+
+        min-height: 110vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .downArrow
+        {
+                @include hoverToRed;
+                font-size: 3rem;
+        }
+
+}
+section
+{
+        form
+        {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+                label
+                {
+                        font-size: 2rem;
+                }
+                input
+                {
+                        text-align: center;
+                }
+                textarea
+                {
+                        text-align: center;
+                }
+                button
+                {
+                        margin-block: 16px;
+                        font-size: 1.1rem;
+                        border: azure 1px solid;
+                        background-color: transparent;
+                        color: azure;
+                        padding-top: .3rem;
+                        padding-inline: 1rem;
+
+                        transition: .15s;
+
+                        &:hover
+                        {
+                                background-color: azure;
+                                color: #0e0e0e;
+                        }
+                }
+        }
+}
+
+section
+{
+        .blogBtn
+        {
+                border: 1px azure solid;
+                padding-inline: .5rem;
+                padding-block: .2rem;
+                transition: 0.15s;
+
+                &:hover
+                {
+                        border-color: red;
+                }
+        }
+}
+
+
+
+
+
+.mainBlog
+{
+        text-align: left;
+        margin-left: 1rem;
+}
+
+
+
