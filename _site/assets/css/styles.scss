@@ -1,19 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-::selection
-{
-        color: black;
-        background-color: azure;
-}
-
-.title::selection
-{
-        color: red;
-}
-
-
-*
-{
+// ################### Boiler plate for me ###########################
+* {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -22,47 +10,118 @@
 
 }
 
-body
-{
-        padding-inline: 1rem;
+// the font and font colour
+body {
+        font-family: 'Special Elite', cursive;
+        color: azure;
+        background-color: #0e0e0e;
 }
 
-@mixin hoverToRed
-{
+// for the selection
+::selection {
+        color: black;
+        background-color: azure;
+}
+
+.title::selection {
+        color: red;
+}
+
+// for the scroll bar
+html::-webkit-scrollbar {
+        width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+        background: rgba(255, 0, 0, .15);
+        border-radius: 100px;
+
+}
+
+html::-webkit-scrollbar-thumb {
+        background: black;
+        border: none;
+        border-radius: 100px;
+}
+
+// the MIXIN for the text hover effect
+@mixin hoverToRed {
         text-decoration: none;
         color: azure;
         font-size: 1.3rem;
         transition: 0.15s;
 
-        &:hover, &:active
-        {
+        &:hover,
+        &:active {
                 color: red;
                 text-decoration: none;
         }
 }
-a
+// the MIXIN for buttons 
+@mixin button
 {
+        margin-block: 16px;
+        font-size: 1.1rem;
+        border: azure 1px solid;
+        background-color: transparent;
+        color: azure;
+        padding-top: .3rem;
+        padding-inline: 1rem;
+
+        transition: .15s;
+
+        &:hover {
+                background-color: azure;
+                color: #0e0e0e;
+        }
+
+}
+// the MIXIN for blog button
+@mixin blogBtn
+{
+        border: 1px azure solid;
+        padding-inline: .5rem;
+        padding-block: .2rem;
+        transition: 0.15s;
+
+        &:hover {
+                border-color: red;
+        }
+
+}
+
+// all the anchor tags
+a {
         @include hoverToRed;
 }
 
-.title
-{
+
+
+
+
+// ##################### My Customisation ######################
+
+.title {
         color: red;
 }
+section:nth-of-type(1) {
+        background-image: linear-gradient(rgba(14, 14, 14, 0.2), rgba(14, 14, 14, 1)), url(../../images/dark.jpg);
+        background-repeat: none;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
 
+        position: relative;
 
-body
-{
-        font-family: 'Special Elite', cursive;
-        background-color: #0e0e0e;
-        color: azure;
+        z-index: 0;
+}
+#svgGrass {
+        background-color: transparent;
+        position: absolute;
+        bottom: 0;
 }
 
-section
-{
-
-
-
+section {
         min-height: 110vh;
 
         display: flex;
@@ -70,80 +129,61 @@ section
         justify-content: center;
         align-items: center;
 
-        .downArrow
-        {
+        .downArrow {
                 @include hoverToRed;
-                font-size: 3rem;
         }
 
 }
-section
-{
-        form
-        {
+
+section {
+        form {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-        
-                label
-                {
+
+                label {
                         font-size: 2rem;
                 }
-                input
-                {
-                        text-align: center;
-                }
-                textarea
-                {
-                        text-align: center;
-                }
-                button
-                {
-                        margin-block: 16px;
-                        font-size: 1.1rem;
-                        border: azure 1px solid;
-                        background-color: transparent;
-                        color: azure;
-                        padding-top: .3rem;
-                        padding-inline: 1rem;
 
-                        transition: .15s;
+                input {
+                        text-align: center;
+                        border: none;
+                        height: 1.8rem;
+                        -webkit-box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.5);
+                        -moz-box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.5);
+                        box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.5);
 
-                        &:hover
-                        {
-                                background-color: azure;
-                                color: #0e0e0e;
-                        }
+                }
+
+                textarea {
+                        text-align: center;
+                        border: none;
+                        -webkit-box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.5);
+                        -moz-box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.5);
+                        box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.5);
+
+                }
+
+                button {
+                        @include button
                 }
         }
 }
 
-section
-{
-        .blogBtn
-        {
-                border: 1px azure solid;
-                padding-inline: .5rem;
-                padding-block: .2rem;
-                transition: 0.15s;
-
-                &:hover
-                {
-                        border-color: red;
-                }
+section {
+        .blogBtn {
+                @include blogBtn
         }
 }
 
 
+// SCSS for the Main BLOG
 
 
 
-.mainBlog
-{
+
+.mainBlog {
         text-align: left;
-        margin-left: 1rem;
+        padding-left: 1rem;
 }
-
-
-
