@@ -10,11 +10,18 @@
 
 }
 
+html
+{
+        scroll-behavior: smooth;
+}
+
 // the font and font colour
 body {
         font-family: 'Special Elite', cursive;
         color: azure;
         background-color: #0e0e0e;
+
+
 }
 
 // for the selection

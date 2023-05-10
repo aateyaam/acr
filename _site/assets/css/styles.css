@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Special Elite", cursive;
   color: azure;

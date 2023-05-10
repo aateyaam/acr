@@ -1,16 +1,36 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-  myFunction();
-};
+// let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
+// let interval = null;
+
+// document.getElementById("test").onmouseover = event => {  
+//   let iteration = 0;
+  
+//   clearInterval(interval);
+  
+//   interval = setInterval(() => {
+//     event.target.innerText = event.target.innerText
+//       .split("")
+//       .map((letter, index) => {
+//         if(index < iteration) {
+//           return event.target.dataset.value[index];
+//         }
+      
+//         return letters[Math.floor(Math.random() * 26)]
+//       })
+//       .join("");
+    
+//     if(iteration >= event.target.dataset.value.length){ 
+//       clearInterval(interval);
+//     }
+    
+//     iteration += 1 / 3;
+//   }, 30);
+// }
+
+
+
+
+
 
 
 
